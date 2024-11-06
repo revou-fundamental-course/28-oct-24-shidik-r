@@ -11,7 +11,9 @@
       <!--section Form-->
       <section>
         <div>
-          <header>Kalkulator BMI</header>
+          <header>
+            <h1>Kalkulator BMI</h1>
+          </header>
           <article>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
@@ -22,29 +24,36 @@
           </article>
         </div>
         <!--Form Input-->
+
         <form>
-          <div>
+          <div class="radio-button">
+            <p>Jenis Kelamin</p>
+            <label for="male">
+              <input type="radio" id="male" name="gender" value="male" />
+              Laki-laki
+            </label>
+            <label for="female">
+              <input type="radio" id="female" name="gender" value="female" />
+              Perempuan
+            </label>
+          </div>
+          <div class="input-box">
             <label for="berat-badan"> Berat Badan : </label>
             <input id="berat-badan" type="number" />
+            <label for="usia"> Usia : </label>
+            <input id="usia" type="number" />
+            <label for="tinggi-badan"> Tinggi Badan : </label>
+            <input id="tinggi-badan" type="number" />
           </div>
-          <button>Hitung BMI</button>
-          <button>Reset</button>
+          <button type="submit">Hitung BMI</button>
+          <button type="reset">Reset</button>
         </form>
-        <div>
-          <header>Form Information</header>
-          <article>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
-              voluptatum, cum laboriosam ea possimus quasi aliquid hic
-              necessitatibus beatae at tenetur molestiae commodi dolorem eveniet
-              nemo repellat atque omnis obcaecati.
-            </p>
-          </article>
-        </div>
       </section>
       <!--Section Resault-->
       <section>
-        <header>Hasil</header>
+        <header>
+          <h2>Hasil</h2>
+        </header>
         <!--Hasil Kalkulasi-->
         <div class="color-section">
           <header>Hasil kalkulasi :</header>
@@ -62,6 +71,8 @@
       </section>
     </main>
     <!--Footer-->
-    <footer>Mode By Shidik</footer>
+    <footer>Mode By Shidik Rachmadhi</footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

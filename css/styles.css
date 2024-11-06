@@ -1,12 +1,17 @@
 /* ini css */
+body {
+  background-color: white;
+}
 main {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  background-color: cadetblue;
+  margin: 48px;
+  padding: 32px;
   justify-content: space-around;
+  border-radius: 8px;
 }
 header {
-  font-weight: 600;
   text-align: center;
 }
 input[type="number"] {
@@ -20,8 +25,13 @@ input[type="number"] {
 }
 form {
   background-color: bisque;
-  padding: 8px;
+  padding: 16px;
   border-radius: 8px;
+  margin-bottom: 8px;
+}
+.radio-button {
+  padding-bottom: 16px;
+  font-weight: 600;
 }
 .color-section {
   background-color: bisque;
@@ -34,6 +44,21 @@ form {
   font-size: 48px;
   font-weight: bold;
 }
-footer {
+button {
+  background-color: aqua;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: medium;
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+footer {
+  margin: 48px;
+  padding: 16px;
+  text-align: center;
+  background-color: cadetblue;
+  border-radius: 8px;
 }
