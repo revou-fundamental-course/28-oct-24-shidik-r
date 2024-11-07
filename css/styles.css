@@ -1,4 +1,20 @@
 /* ini css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Global styles */
+:root {
+  --font-family: "Poppins", sans-serif;
+  --primary-color: #1e9c9c;
+  --secondary-color: #c3c2c2;
+  --error-color: #ff0000;
+}
+
+* {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
 }
@@ -13,6 +29,7 @@ main {
 }
 header {
   text-align: center;
+  font-size: x-large;
 }
 input[type="number"] {
   width: 100%;
@@ -23,37 +40,62 @@ input[type="number"] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+.input-box {
+  font-weight: bold;
+}
 form {
   background-color: bisque;
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 8px;
 }
+
 .radio-button {
   padding-bottom: 16px;
   font-weight: 600;
 }
+
 .color-section {
   background-color: bisque;
   padding: 12px;
   text-align: center;
   border-radius: 8px;
 }
-#result {
+.error-message {
+  color: var(--error-color);
+  font-size: small;
+  font-weight: 400;
+}
+
+.result-bmi {
   padding: 8px;
   font-size: 48px;
   font-weight: bold;
 }
-button {
-  background-color: aqua;
-  padding: 5px 12px;
+.btn {
   border: none;
   border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
   font-size: medium;
-  text-align: center;
-  text-decoration: none;
   cursor: pointer;
-  margin-top: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #136767;
+}
+
+.btn-reset {
+  background-color: white;
+  border: 1px solid gray;
+  color: black;
+}
+
+.btn-reset:hover {
+  background-color: #c3c2c2;
 }
 footer {
   margin: 48px;
@@ -61,4 +103,109 @@ footer {
   text-align: center;
   background-color: cadetblue;
   border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Media Queries untuk membuat tampilan responsif */
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 600px) {
+  main {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  header {
+    font-size: large;
+  }
+
+  form {
+    padding: 8px;
+  }
+
+  input[type="number"] {
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%; /* Tombol memenuhi lebar layar */
+    font-size: small;
+    padding: 8px 10px;
+  }
+
+  .btn-reset {
+    font-size: small;
+  }
+
+  .result-bmi {
+    font-size: 32px; /* Ukuran teks hasil lebih kecil */
+  }
+
+  footer {
+    margin: 16px;
+    padding: 8px;
+  }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (min-width: 601px) and (max-width: 768px) {
+  main {
+    margin: 32px;
+    padding: 24px;
+  }
+
+  header {
+    font-size: larger;
+  }
+
+  form {
+    padding: 12px;
+  }
+
+  input[type="number"] {
+    padding: 12px;
+  }
+
+  .btn {
+    width: 100%; /* Tombol memenuhi lebar layar */
+    padding: 10px 15px;
+  }
+
+  .result-bmi {
+    font-size: 36px; /* Ukuran teks hasil menyesuaikan */
+  }
+
+  footer {
+    margin: 32px;
+    padding: 12px;
+  }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 769px) {
+  main {
+    margin: 48px;
+    padding: 32px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  input[type="number"] {
+    padding: 12px 20px;
+  }
+
+  .btn {
+    font-size: medium;
+  }
+
+  .result-bmi {
+    font-size: 48px;
+  }
+
+  footer {
+    margin: 48px;
+    padding: 16px;
+  }
 }

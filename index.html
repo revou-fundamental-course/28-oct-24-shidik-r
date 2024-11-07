@@ -16,56 +16,122 @@
           </header>
           <article>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-              voluptatibus, laborum, at cum quia iste magnam aliquid tempore ad
-              distinctio qui eligendi, corrupti illo. Est exercitationem ea
-              reprehenderit quas quia.
+              Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
+              bentuk tubuh yang menunjang penampilan, berat badan ideal juga
+              menandakan kondisi tubuh yang sehat. Bagaimana denganmu? <br />
+              Yuk, hitung sekarang di kalkulator BMI.
             </p>
           </article>
         </div>
         <!--Form Input-->
 
-        <form>
+        <form id="form" class="form" aria-label="Kalkulator BMI">
+          <!--Ini Radio-->
           <div class="radio-button">
-            <p>Jenis Kelamin</p>
-            <label for="male">
-              <input type="radio" id="male" name="gender" value="male" />
-              Laki-laki
-            </label>
-            <label for="female">
-              <input type="radio" id="female" name="gender" value="female" />
-              Perempuan
-            </label>
+            <label class="form-label" for="gender">Jenis Kelamin</label>
+            <div class="input-group">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="Pria"
+                class="form-input-check"
+                checked
+              />
+              <label for="male">Pria</label>
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="Wanita"
+                class="form-input-check"
+              />
+              <label for="female">Wanita</label>
+            </div>
+            <span id="genderErrorMessage" class="error-message"></span>
           </div>
+          <!--Ini Input-Box-->
           <div class="input-box">
-            <label for="berat-badan"> Berat Badan : </label>
-            <input id="berat-badan" type="number" />
-            <label for="usia"> Usia : </label>
-            <input id="usia" type="number" />
-            <label for="tinggi-badan"> Tinggi Badan : </label>
-            <input id="tinggi-badan" type="number" />
+            <!--Input Beart Badan-->
+            <div>
+              <label class="form-label" for="weight">Berat Badan (Kg) </label>
+              <div class="input-group">
+                <input
+                  type="number"
+                  name="weight"
+                  id="weight"
+                  class="form-input"
+                  min="1"
+                  max="300"
+                  aria-describedby="weightDesc"
+                  placeholder="Berat badan kamu. . . ."
+                />
+              </div>
+              <span id="weightErrorMessage" class="error-message"></span>
+            </div>
+            <!--Input Umur-->
+            <div>
+              <label class="form-label" for="age">Umur (Th) </label>
+              <div class="input-group">
+                <input
+                  type="number"
+                  name="age"
+                  id="age"
+                  class="form-input"
+                  min="1"
+                  max="150"
+                  aria-describedby="ageDesc"
+                  placeholder="Umur Kamu . . . ."
+                />
+              </div>
+              <span id="ageErrorMessage" class="error-message"></span>
+            </div>
+            <!--Input Tinggi Badan-->
+            <div>
+              <label class="form-label" for="height">Tinggi Badan (Cm) </label>
+              <div class="input-group">
+                <input
+                  type="number"
+                  name="height"
+                  id="height"
+                  class="form-input"
+                  min="1"
+                  max="250"
+                  aria-describedby="heightDesc"
+                  placeholder="Tinggi Badan Kamu. . . ."
+                />
+              </div>
+              <span id="heightErrorMessage" class="error-message"></span>
+            </div>
           </div>
-          <button type="submit">Hitung BMI</button>
-          <button type="reset">Reset</button>
+          <!--Button-->
+          <div>
+            <button type="button" class="btn" onclick="checkBMI()">
+              Hitung BMI
+            </button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+          </div>
         </form>
       </section>
+
       <!--Section Resault-->
-      <section>
+      <section id="result">
         <header>
-          <h2>Hasil</h2>
+          <h2>Hasil Kalkulasi</h2>
         </header>
         <!--Hasil Kalkulasi-->
         <div class="color-section">
-          <header>Hasil kalkulasi :</header>
-          <p id="result">24.3</p>
+          <h3 id="result-title" class="result-title"></h3>
+          <div id="result-bmi" class="result-bmi"></div>
+          <p id="result-desc" class="result-desc"></p>
         </div>
         <!--Info Hasil kalkulasi-->
         <article>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            tempore dolor repellat nisi itaque saepe quibusdam sapiente odit
-            cupiditate aut delectus libero quod ratione dolore consequatur est,
-            reiciendis sint fuga?
+            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
+            tubuh dan resiko penyakit seseorang, Anda perlu konsultasi lebih
+            lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat
+            badan Anda.
           </p>
         </article>
       </section>
